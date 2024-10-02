@@ -1,0 +1,28 @@
+{
+  "name": "text-to-speech-browser-extension",
+  "version": "1.0.0",
+  "description": "A browser extension that reads aloud the content of web pages.",
+  "main": "src/background/background.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack --mode development --watch",
+    "test": "jest"
+  },
+  "keywords": [
+    "browser-extension",
+    "text-to-speech",
+    "accessibility"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-loader": "^8.4.1",
+    "css-loader": "^6.11.0",
+    "jest": "^27.5.1",
+    "style-loader": "^3.3.4",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

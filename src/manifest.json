@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "Text-to-Speech Reader",
+    "version": "1.0.0",
+    "description": "A browser extension that reads aloud the content of web pages.",
+    "icons": {
+      "16": "assets/icons/icon-16.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    },
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tts"
+    ],
+    "background": {
+      "service_worker": "background.bundle.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content/contentScript.js"],
+        "css": ["styles/main.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "assets/icons/icon-16.png",
+        "48": "assets/icons/icon-48.png",
+        "128": "assets/icons/icon-128.png"
+      }
+    },
+    "options_page": "options/options.html",
+    "web_accessible_resources": [
+      {
+        "resources": ["assets/images/splash.png"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "commands": {
+      "toggle-reading": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+S"
+        },
+        "description": "Toggle text-to-speech reading"
+      }
+    },
+    "host_permissions": ["<all_urls>"]
+}
+  

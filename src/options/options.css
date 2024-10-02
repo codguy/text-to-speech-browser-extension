@@ -1,0 +1,26 @@
+/* src/options/options.css */
+body {
+    font-family: Arial, sans-serif;
+    width: 400px;
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-top: 15px;
+  }
+  
+  select, input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+  }
+  
