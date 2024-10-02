@@ -14,22 +14,17 @@
       "tts"
     ],
     "background": {
-      "service_worker": "background.bundle.js"
+      "service_worker": "background/background.js"
     },
     "content_scripts": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content/contentScript.js"],
+        "js": ["content/contentScript.js", "assets/jquery.min.js"],
         "css": ["styles/main.css"]
       }
     ],
     "action": {
-      "default_popup": "popup/popup.html",
-      "default_icon": {
-        "16": "assets/icons/icon-16.png",
-        "48": "assets/icons/icon-48.png",
-        "128": "assets/icons/icon-128.png"
-      }
+      "default_popup": "popup/popup.html"
     },
     "options_page": "options/options.html",
     "web_accessible_resources": [

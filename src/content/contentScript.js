@@ -4,6 +4,7 @@ let currentElement = null;
 
 // Function to highlight text
 function highlightText(element) {
+  console.log('highlightText called with element:', element);
   if (currentElement) {
     currentElement.classList.remove('tts-highlight');
   }
@@ -16,6 +17,12 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if (request.action === 'highlight') {
     highlightText(request.element);
     sendResponse({ status: 'highlighted' });
+  } else if (request.action === 'highlightWord') {
+    // Find the word in the document and highlight it
+    const wordElement = document.body.querySelector(`:contains("${request.word}")`);
+    if (wordElement) {
+      highlightText(wordElement);
+    }
   }
 });
 

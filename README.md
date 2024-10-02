@@ -1,38 +1,44 @@
-# Text-to-Speech Reader Browser Extension
+# Text-to-Speech Browser Extension
 
 ## Overview
-A browser extension that reads aloud the content of web pages, supporting multiple languages and customizable settings to enhance accessibility and user experience.
+A browser extension that enables users to have long pages of text read aloud, enhancing accessibility and user experience.
 
 ## Features
-- Read entire web pages or selected text aloud.
-- Multiple voices and language support.
-- Adjustable speech rate, pitch, and volume.
-- Text highlighting synchronized with speech.
-- Bookmarking and note-taking capabilities.
-- Keyboard shortcuts for easy control.
-- Light and dark theme options.
+- Text-to-Speech functionality using Web Speech API
+- Multiple voices and languages
+- Adjustable speech rate and pitch
+- Highlighting text as it is read
+- User settings for customization
+- Keyboard shortcuts
+- Bookmarking and notes
+- Offline functionality
 
 ## Installation
-1. Clone the repository:
+
+1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/tts-reader-extension.git
+   git clone https://github.com/yourusername/text-to-speech-browser-extension.git
    ```
-2. Navigate to the project directory:
+2. **Navigate to the project directory:**
    ```bash
-   cd tts-reader-extension
+   cd text-to-speech-browser-extension
    ```
-3. Open the browser’s extension management page (e.g., `chrome://extensions/` for Chrome).
-4. Enable "Developer mode."
-5. Click "Load unpacked" and select the project directory.
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+4. **Build the project:**
+   ```bash
+   npm run build
+   ```
+5. **Load the extension into your browser:**
+   - **Chrome:** Go to `chrome://extensions/`, enable "Developer mode", click "Load unpacked", and select the `dist/` folder.
+   - **Firefox:** Go to `about:debugging`, click "This Firefox", then "Load Temporary Add-on", and select the `manifest.json` file.
 
 ## Usage
-1. Click the extension icon in the browser toolbar.
-2. Select text on a webpage or choose to read the entire page.
-3. Use the popup controls to play, pause, or stop the speech.
-4. Access settings to customize voice, language, and speech parameters.
+- Click the extension icon to open the popup.
+- Select the text you want to be read aloud or let the extension read the entire page.
+- Customize voice, speed, and pitch in the settings.
 
-## Contribution
-Contributions are welcome! Please fork the repository and create a pull request with your changes.
-
-## License
-This project is licensed under the MIT License.
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request.
